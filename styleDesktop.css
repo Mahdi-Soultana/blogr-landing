@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ### Primary */
+    /* CTA text */
+    --light-red: hsl(356, 100%, 66%);
+    /* CTA hover background */
+    --very-light-red: hsl(355, 100%, 74%);
+    /* headings*/
+    --very-dark-blue: hsl(208, 49%, 24%);
+    /* ### Neutral */
+    --white: hsl(0, 0%, 100%);
+    /* (footer text) */
+    --grayish-blue: hsl(207, 13%, 34%);
+    /* footer background */
+    --very-dark-black-blue: hsl(240, 10%, 16%);
+    /* Background gradient - Intro/CTA mobile nav: */
+    --very-light-red: hsl(13, 100%, 72%);
+    --light-red: hsl(353, 100%, 62%);
+    /* Background gradient - body: */
+    --very-dark-gray-blue: hsl(237, 17%, 21%);
+    --very-dark-desaturated-blue: hsl(237, 23%, 32%);
+}
+
+html {
+    font-size: 90%;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--very-dark-blue);
+    margin: 1.6rem 0;
+    font-size: 1.9rem;
+    font-family: "Overpass", sans-serif;
+}
+
+h1 {
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    color: var(--white);
+}
+.closeBtn,.img-holder .img-desktup,.nav-header button,.arrow-dark{
+    display: none;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+    display: inline-block;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: currentColor;
+    font-size: 1.4rem;
+    font-family: "Overpass", sans-serif;
+    margin: 1rem;
+    font-weight: bold;
+    
+    color: rgb(31, 31, 31);
+
+}
+header{
+    height: 80vh;
+    width: 100vw;
+    background: var(--light-red) no-repeat center center/cover;
+    background-image: url(./images/bg-pattern-intro.svg) ,linear-gradient(to left,var(--very-light-red),var(--light-red));
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    align-items: center;
+}
+/* Nav header center */
+.nav-center{
+     
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+.nav-center>ul,.nav-center ul li>a{
+    display: flex;
+    justify-content: center;align-items: center;
+    
+}
+[class*="arrow"]{
+    width:1.5rem;
+    margin-left: 1rem;
+}
+.nav-center ul li ul{
+    position: absolute;
+    background-color: #fafafa;
+    border-radius: 5px;
+    /* To Toggle */
+    display: none;
+}
+/* ******* */
+/* Header  Texts */
+h1{
+    font-size: 5rem;
+}
+h3{
+    color: #efe;
+    font-weight: 400;
+}
+/* Btns CTA */
+.cta,.signUp{
+    display: inline-block;
+    padding: 1.3rem 2.6rem;
+    font-size: 2rem;
+    background-color: white;
+    color: var(--light-red);
+    border: none;
+    margin: 2rem 3rem;
+    cursor: pointer;
+}
+.learn{
+    background-color: transparent;
+    border: white 3px solid;
+    color: white;
+}
+.signUp{
+    border-radius: 10em;
+    background-color: rgba(255, 255, 255, 0.842);
+    padding: .7rem 2rem;
+}
+/* media  */
+/* @media(max-width:700px){
+    .closeBtn,.img-holder .img-mobile,.nav-center ul,.arrow{
+        display: none;
+    }
+    .nav-header button,.img-desktup,.arrow-dark{
+        display: block;
+    }
+} */
