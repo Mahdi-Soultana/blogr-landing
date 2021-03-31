@@ -199,7 +199,7 @@ header {
 }
 .nav-center ul li:hover > a {
   text-decoration: underline 3px;
-  text-decoration-color: blueviolet;
+  text-decoration-color: var(--very-light-red);
   text-underline-offset: 6px;
 }
 .nav-center > ul li > ul li:last-child {
@@ -357,6 +357,9 @@ button:hover {
   background-image: url(./images/bg-pattern-intro.svg),
     linear-gradient(to left, var(--very-light-red), var(--light-red));
 }
+.nav-center ul li ul {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.145);
+}
 /* media  */
 @media (max-width: 800px) {
   /* sectionStyling */
@@ -437,19 +440,20 @@ button:hover {
     font-size: 4rem;
   }
   .nav-center ul li ul {
-    background-color: rgb(241, 239, 239);
-    border-radius: 2px;
+    background-color: whitesmoke;
+    border-radius: 3px;
     max-width: 90%;
     margin: 0 auto;
     margin-bottom: 2rem;
   }
   .nav-center ul {
+    border-radius: 3px;
     padding: 1rem;
     background-color: rgb(255, 255, 255);
   }
   .nav-center ul a {
     font-size: 1.5rem;
-    color: rgb(54, 54, 54);
+    color: var(--very-dark-desaturated-blue);
     font-weight: 700;
   }
   .nav-center.scroll {
@@ -482,9 +486,24 @@ button:hover {
     width: 3rem;
   }
   .signUp {
+    padding: 2vw 7vw;
     margin: 1rem 2rem;
-    background-color: var(--light-red);
+    background-image: linear-gradient(
+      to left,
+      var(--very-light-red),
+      var(--light-red)
+    );
     color: white;
+    transition: 0.7s all;
+  }
+  .signUp:hover {
+    background-image: linear-gradient(
+      145deg,
+      var(--very-light-red),
+      var(--light-red)
+    );
+    opacity: 1;
+    color: whitesmoke;
   }
   /* From Javascrpit Toggle Nav */
   .nav-center.active > ul {
